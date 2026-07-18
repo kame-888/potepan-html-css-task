@@ -1,3 +1,8 @@
+/* Header */
+header {
+  z-index: 100;
+  background-color: #fff;
+}
 .header-flex {
   display: flex;
   justify-content: space-between;
@@ -22,5 +27,48 @@
 
 .header-button {
   font-size: 12px;
-  border-radius: 999px
+  border-radius: 999px;
 }
+
+/* Main Visual */
+.main-visual {
+  position: relative;
+}
+
+.background-image-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.background-image-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.background-image-3 {
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  z-index: -1;
+}
+
+.background-image-4 {
+  width: 60%;
+  height: auto;
+  position: absolute;
+  top: -120px;
+  right: 0;
+  z-index: -1;
+}
+
+.main-text {
+  max-width: 100%;
+  height: auto;
+  padding-top: 250px;
+  display: block;
+}
+
