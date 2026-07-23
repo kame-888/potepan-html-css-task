@@ -6,14 +6,17 @@ body {
 header {
   z-index: 100;
   background-color: #fff;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 36px;
+  padding-right: 36px;
 }
 
 .header-flex {
+  height: 70px;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+  display: flex;
+  justify-content: space-between; 
 }
 
 .header-logo img {
@@ -21,15 +24,18 @@ header {
   width: auto;
 }
 
-.header-flex {
-  display: flex;
-  justify-content: space-between;
-}
-
 .header-nav {
   display: flex;
   justify-content: center;
   align-items: center; 
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+}
+.hamburger-btn {
+  display: none;
 }
 
 .header-nav nav {
@@ -42,23 +48,35 @@ header {
 }
 
 .header-nav li{
+  display: block;
   list-style: none;
   text-align: center;
 }
 
 .header-nav a {
-  font-size: 11px;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  line-height: 14.4px;
+  font-size: 11.5px;
   font-weight: 600;
   font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+
+.header-nav a span {
+  display: block;
 }
 
 .header-button {
   background-color: #F79214;
   font-size: 12px;
+  font-weight: 700;
   color: #fff;
   border-radius: 999px;
   border: none;
   height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Main Visual */
@@ -68,53 +86,49 @@ header {
 
 .background-image-1 {
   position: absolute;
-  top: -2%;
-  left: -5%;
+  top: -2.5%;
+  left: -3.5%;
   z-index: -1;
 }
 
 .background-image-2 {
   position: absolute;
-  bottom: 0;
+  bottom: -70px;
   right: 0;
   z-index: -1;
 }
 
 .background-image-3 {
   position: absolute;
-  top: 10%;
-  left: -5%;
+  top: 14%;
+  left: -4.5%;
   z-index: -1;
 }
 
 .background-image-4 {
-  width: 60%;
-  height: auto;
   position: absolute;
-  top: -120px;
+  top: -70px;
   right: 0;
   z-index: -1;
 }
 
-.background-image-5 {
-  position: absolute;
-  top: 20%;
-  left: 45%;
-}
 
 .main-text {
-  max-width: 100%;
-  height: auto;
-  padding-top: 12%;
-  padding-left: 10%;
-  padding-right: 55%;
-  padding-bottom: 8%;
+  width: 503.725px;
+  height: 317px;
+  padding-top: 189px;
+  padding-left: 16%;
+  padding-right: 50%;
+  padding-bottom: 6%;
   display: block;
+  position: relative;
 }
 
 .main-text h1 {
   font-size: 42px;
   font-weight: 800;
+  font-family: "Lato", sans-serif;
+  color: #333;
 }
 
 .main-button {
@@ -122,6 +136,7 @@ header {
   border-radius: 38px;
   border: none;
   font-size: 16px;
+  font-weight: 700;
   color: #fff;
   width: 100%;
   height: 64px;
@@ -129,7 +144,102 @@ header {
 
 .main-text p {
   font-size: 12px;
+  line-height: 16px;
   font-weight: 500;
+  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+
+.maintext-image {
+  position: absolute;
+  top: 114px;
+  left: 690px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .header-logo img {
+    height: 20px;
+    width: auto;
+  }
+
+  .header-nav nav {
+    display: none;
+  }
+
+  .header-nav button {
+    display: none;
+  }
+
+  .menu-icon {
+    width: 25px;
+    height: 22px;
+    position: fixed;
+    top: 19px;
+    right: 35px;
+    cursor: pointer;
+    z-index: 3;
+    display: inline-block;
+  }
+
+  .menu-icon span {
+    display: block;
+    height: 2px;
+    margin: 6px 0;
+    background: #a5a4a4;
+    border-radius: 2px;
+    transition: 0.4s;
+  }
+
+  .main-visual {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .background-image-1 {
+    position: absolute;
+    top: -6%;
+    left: -6%;
+    z-index: -1;
+  }
+
+  .background-image-2 {
+    position: absolute;
+    bottom: -22%;
+    right: 0;
+    z-index: -1;
+  }
+
+  .background-image-3 {
+    position: absolute;
+    top: 14%;
+    left: -9%;
+    z-index: -1;
+  }
+
+  .background-image-4 {
+  position: absolute;
+  top: -15%;
+  right: 0;
+  z-index: -1;
+  }
+
+  .main-text {
+    width: 503.73px;
+    height: 317px;
+    padding-top: 179px;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 6%;
+    display: block;
+    position: relative;
+  }
+
+  .maintext-image {
+    position: absolute;
+    top: 105px;
+    left: 485px;
+  }
 }
 
 
