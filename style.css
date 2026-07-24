@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
 }
-/* Header */
+/* ヘッダー */
 header {
   z-index: 100;
   background-color: #fff;
@@ -30,14 +30,6 @@ header {
   align-items: center; 
 }
 
-.nav-menu {
-  display: flex;
-  gap: 1rem;
-}
-.hamburger-btn {
-  display: none;
-}
-
 .header-nav nav {
   padding-right: 45px;
 }
@@ -63,6 +55,10 @@ header {
   font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
 }
 
+.header-nav a:hover {
+  color: #5e5e5e;
+}
+
 .header-nav a span {
   display: block;
 }
@@ -77,6 +73,11 @@ header {
   height: 40px;
   padding-left: 20px;
   padding-right: 20px;
+  cursor: pointer;
+}
+
+.header-button:hover {
+  background-color: #ffb964;
 }
 
 /* Main Visual */
@@ -140,6 +141,11 @@ header {
   color: #fff;
   width: 100%;
   height: 64px;
+  cursor: pointer;
+}
+
+.main-button:hover {
+  background-color: #ffb964;
 }
 
 .main-text p {
@@ -151,17 +157,12 @@ header {
 
 .maintext-image {
   position: absolute;
-  top: 114px;
-  left: 690px;
+  top: 19%;
+  left: 46%;
 }
 
 /* レスポンシブ対応 */
-@media (max-width: 768px) {
-    .header-logo img {
-    height: 20px;
-    width: auto;
-  }
-
+@media (max-width: 1080px) {
   .header-nav nav {
     display: none;
   }
@@ -188,6 +189,14 @@ header {
     background: #a5a4a4;
     border-radius: 2px;
     transition: 0.4s;
+  }
+
+}
+
+@media (max-width: 768px) {
+    .header-logo img {
+    height: 20px;
+    width: auto;
   }
 
   .main-visual {
